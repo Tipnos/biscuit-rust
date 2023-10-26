@@ -173,7 +173,7 @@ pub enum Signature {
 pub enum Logic {
     #[error("a rule provided by a block is producing a fact with unbound variables")]
     InvalidBlockRule(u32, String),
-    #[error("authorization failed: the following policy matched: {policy}, and the following checks failed: {checks:?}")]
+    #[error("{policy}, and the following checks failed: {checks:?}")]
     Unauthorized {
         /// the policy that matched
         policy: MatchedPolicy,
